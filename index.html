@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon vs Pokemon - Defense Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>Pokemon vs Pokemon Defense</h1>
+            <div class="game-info">
+                <div class="sun-counter">
+                    <span>☀️</span>
+                    <span id="sunCount">50</span>
+                </div>
+                <div class="wave-info">
+                    <span>Wave: </span>
+                    <span id="waveNumber">1</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            
+            <div class="pokemon-selector">
+                <h3>Choose Your Pokemon</h3>
+                <div class="pokemon-options">
+                    <div class="pokemon-option" data-pokemon="pikachu">
+                        <div class="pokemon-icon">⚡</div>
+                        <div class="pokemon-name">Pikachu</div>
+                        <div class="pokemon-cost">25 ☀️</div>
+                    </div>
+                    <div class="pokemon-option" data-pokemon="bulbasaur">
+                        <div class="pokemon-icon">🌱</div>
+                        <div class="pokemon-name">Bulbasaur</div>
+                        <div class="pokemon-cost">50 ☀️</div>
+                    </div>
+                    <div class="pokemon-option" data-pokemon="charizard">
+                        <div class="pokemon-icon">🔥</div>
+                        <div class="pokemon-name">Charizard</div>
+                        <div class="pokemon-cost">100 ☀️</div>
+                    </div>
+                    <div class="pokemon-option" data-pokemon="squirtle">
+                        <div class="pokemon-icon">💧</div>
+                        <div class="pokemon-name">Squirtle</div>
+                        <div class="pokemon-cost">75 ☀️</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="startGame">Start Game</button>
+            <button id="pauseGame">Pause</button>
+            <button id="restartGame">Restart</button>
+        </div>
+        
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <ul>
+                <li>Click on a Pokemon to select it, then click on a grid square to place it</li>
+                <li>Your Pokemon will automatically attack incoming enemy Pokemon</li>
+                <li>Collect sun drops (☀️) to buy more Pokemon</li>
+                <li>Defend your base from waves of attacking Pokemon!</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
