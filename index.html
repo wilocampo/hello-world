@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon vs Pokemon - Tower Defense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>Pokemon vs Pokemon</h1>
+            <div class="game-info">
+                <div class="sun-counter">
+                    <span>☀️</span>
+                    <span id="sunCount">50</span>
+                </div>
+                <div class="wave-info">
+                    <span>Wave: </span>
+                    <span id="waveNumber">1</span>
+                </div>
+                <div class="lives">
+                    <span>❤️</span>
+                    <span id="lives">3</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <div class="pokemon-selector">
+                <div class="pokemon-card" data-pokemon="bulbasaur" data-cost="25">
+                    <div class="pokemon-icon">🌱</div>
+                    <div class="pokemon-name">Bulbasaur</div>
+                    <div class="pokemon-cost">25☀️</div>
+                </div>
+                <div class="pokemon-card" data-pokemon="charmander" data-cost="50">
+                    <div class="pokemon-icon">🔥</div>
+                    <div class="pokemon-name">Charmander</div>
+                    <div class="pokemon-cost">50☀️</div>
+                </div>
+                <div class="pokemon-card" data-pokemon="squirtle" data-cost="75">
+                    <div class="pokemon-icon">💧</div>
+                    <div class="pokemon-name">Squirtle</div>
+                    <div class="pokemon-cost">75☀️</div>
+                </div>
+                <div class="pokemon-card" data-pokemon="pikachu" data-cost="100">
+                    <div class="pokemon-icon">⚡</div>
+                    <div class="pokemon-name">Pikachu</div>
+                    <div class="pokemon-cost">100☀️</div>
+                </div>
+            </div>
+            
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            
+            <div class="controls">
+                <button id="startWave">Start Wave</button>
+                <button id="pauseGame">Pause</button>
+                <button id="restartGame">Restart</button>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <ul>
+                <li>Click on a Pokemon card to select it</li>
+                <li>Click on a grid square to place your Pokemon</li>
+                <li>Defend against attacking Pokemon waves</li>
+                <li>Collect sun (☀️) to buy more Pokemon</li>
+                <li>Don't let attacking Pokemon reach your base!</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
