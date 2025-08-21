@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Poké vs Wild - Canvas TD</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<div class="app">
+		<aside class="sidebar">
+			<h2>Poké Deck</h2>
+			<div id="cards" class="cards"></div>
+			<div class="controls">
+				<button id="pauseBtn" class="btn">Pause</button>
+				<button id="restartBtn" class="btn btn-secondary">Restart</button>
+			</div>
+			<div class="legend">
+				<h3>How to Play</h3>
+				<ul>
+					<li>Select a Pokémon, then click a tile to place.</li>
+					<li>Right-click a placed Pokémon to remove (refund 50%).</li>
+					<li>Oddish generates energy over time.</li>
+					<li>Stop wild Pokémon from reaching the left edge.</li>
+				</ul>
+			</div>
+		</aside>
+		<main class="main">
+			<header class="hud">
+				<div class="stat"><span>Energy</span> <strong id="energyText">0</strong></div>
+				<div class="stat"><span>Time</span> <strong id="timeText">0:00</strong></div>
+				<div class="stat"><span>Status</span> <strong id="statusText">Playing</strong></div>
+			</header>
+			<canvas id="game-canvas" width="900" height="500"></canvas>
+		</main>
+	</div>
+
+	<script src="main.js"></script>
+</body>
+</html>
+
